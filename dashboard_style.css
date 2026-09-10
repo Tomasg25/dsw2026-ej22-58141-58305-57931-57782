@@ -18,6 +18,11 @@
   left: -200px;
 }
 
+.dashboard-container nav.active {
+  left: 0;
+  transition: left 0.3s ease;
+}
+
 .dashboard-container nav ul {
   list-style: none;
   padding: 0;

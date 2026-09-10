@@ -4,4 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
   logoutButton.addEventListener('click', () => {
     window.location.href = 'login.html';
   });
+
+  const menuButton = document.getElementById('menuBtn');
+  const sidebar = document.getElementById('sidebar');
+
+  menuButton.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+  });
+  
 });
