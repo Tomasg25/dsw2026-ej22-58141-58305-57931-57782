@@ -9,8 +9,11 @@
 }
 
 
-.createSpeciality-container nav {
+/*.createSpeciality-container nav {
     grid-area: nav;
+    position: static;
+        left: 0;
+        height: auto;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 100px 400px auto;
@@ -81,7 +84,7 @@
 .createSpeciality-container nav h3 {
     color: rgb(31, 31, 116);
 }
-
+*/
 .createSpeciality-container main {
     grid-area: main;
     display: grid;
@@ -90,7 +93,7 @@
     grid-template-areas:
         "titulo"
         "formulario";
-    gap: 1rem;
+    gap: 3rem;
     padding: 1% 10%;
     background-color: #c3dbef;
 }
