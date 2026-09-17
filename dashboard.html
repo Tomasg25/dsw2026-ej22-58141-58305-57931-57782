@@ -6,29 +6,57 @@
   <title>Listado de Productos</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="dashboard_style.css">
-  <script src="dashboard.js"></script>
+  <script src="dashboard.js" defer></script>
 </head>
 <body>
   <div class="dashboard-container">
     <header>
-      <span>Gestor de turnos</span>
+      <span>Admin Portal</span>
       <div>
-        <button class="menu">&#9776;</button>
-        <button id="logout">Cerrar Sesión</button>
+        <button id="menuBtn" class="menu">&#9776;</button>
       </div>
     </header>
     <nav id="sidebar">
       <ul>
         <li><a href="#">Panel</a></li>
+        <li><a href="prueba.html">Doctores</a></li>
+        <li><a href="#">Especialidades</a></li>
+        <li><a href="#">Busqueda de Pacientes</a></li>
       </ul>
+      
     </nav>
     <main>
-      <h1>Pacientes</h1>
+      <div id="titulo">
+        <div id ="textos">
+          <label>Vista General de Gestión</label>
+          <label style="font-size: x-small;" for="">configure el personal medico y las especialidades del departamento</label>
+        </div>
+        <div id="botones">
+          <button id="addPDoctortBtn">Agregar Doctor</button>
+          <button id="addSpecialidadBtn">Agregar Especialidad</button>
+        </div>
+
+      </div>
+      <div id="cards">
+        <div class="card">
+          <h3>DOCTORES ACTIVOS</h3>
+          <p>Descripción del card 1</p>
+        </div>
+        <div class="card">
+          <h3>ESPECIALIDADES ACTIVAS</h3>
+          <p>Descripción del card 2</p>
+        </div>
+        <div class="card">
+          <h3>TURNOS CONFIRMADOS PARA HOY</h3>
+          <p>Descripción del card 3</p>
+        </div>
+      </div>
       <table>
         <thead>
           <tr>
-            <th>ID</th>
-            <th>Paciente</th>
+            <th>Nombre</th>
+            <th>Especialidad</th>
+            <th>Estado</th>
           </tr>
         </thead>
         <tbody id="product-table-body">
@@ -36,7 +64,13 @@
         </tbody>
       </table>
     </main>
-    <footer>Mi Aplicación &copy; 2024</footer>
+    <footer>
+      <div>
+        <button id="config">Configuraciones</button>
+        <button id="logout">Cerrar Sesión</button>
+      </div>
+      Mi Aplicación &copy; 2024
+    </footer>
   </div>
 </body>
 </html>
