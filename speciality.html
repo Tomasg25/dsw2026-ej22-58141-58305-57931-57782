@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="speciality.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <script src="speciality.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="speciality-container">
+        <nav id="sidebar">
+
+            <div id="sdHeader">
+                <h3>Admin Portal</h3>
+                <span>HealthCare Management</span>
+            </div>
+            <div id="sdUl">
+                <ul>
+                    <li><a href="dashboard.html">Panel</a></li>
+                    <li><a href="#">Doctores</a></li>
+                    <li id="actual"><a href="speciality.html">Especialidades</a></li>
+                    <li><a href="#">Busqueda de Pacientes</a></li>
+                </ul>
+            </div>
+            <div id="sdFooter">
+                <ul>
+                    <li><a href="#">Configuraciones</a></li>
+                    <li><a href="login.html">Cerrar Sesion</a></li>
+                </ul>
+                Mi Aplicación &copy; 2024
+            </div>
+        </nav>
+        <main>
+            <div id="head">
+                <div id="titulo">
+                    <h3>Directorio de Especialidades</h3>
+                    <span>Administre las categorias medicas, servicios y disponibilidad del personal
+                        especializado.</span>
+                </div>
+                <div id="busqueda">
+                    <input type="search">
+                    <button id="addBtn">Nueva Especialidad</button>
+                </div>
+
+            </div>
+
+            <div id="tabla">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Descripcion</th>
+                            <th>Estado</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody id="specialityTableBody">
+                        
+                    </tbody>
+                </table>
+
+            </div>
+            <div id="cards">
+                <div class="card">
+                    <h3>TOTAL ESPECIALIDADES</h3>
+                    <p>Descripción del card 1</p>
+                </div>
+                <div class="card">
+                    <h3>MAS DEMANDADAS</h3>
+                    <p>Descripción del card 2</p>
+                </div>
+                <div class="card">
+                    <h3>NUEVAS ESTE MES</h3>
+                    <p>Descripción del card 3</p>
+                </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
