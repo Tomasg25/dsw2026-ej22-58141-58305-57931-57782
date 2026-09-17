@@ -16,18 +16,30 @@ const specialities=[{
   "estado": "ACTIVO",
   "name": "Otorrinolaringología",
   "description": "Especialidad que aborda las enfermedades del oído, nariz, garganta y estructuras relacionadas."}
- ];
+];
+
 specialities.forEach((speciality)=>{
+
     let fila=document.createElement("tr");
+
     let nombre=document.createElement("td");
+
     let descripcion=document.createElement("td");
+
     let estado=document.createElement("td");
+
     nombre.textContent=speciality.name;
+
     descripcion.textContent=speciality.description;
+
     estado.textContent=speciality.estado;
+    
     fila.appendChild(nombre);
+    
     fila.appendChild(descripcion);
+    
     fila.appendChild(estado);
+    
     tabla.appendChild(fila);
 });
 
