@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const logoutButton = document.getElementById('logout');
+ /* const logoutButton = document.getElementById('logout');
 
   logoutButton.addEventListener('click', () => {
     window.location.href = 'login.html';
@@ -9,6 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const sidebar = document.getElementById('sidebar');
   menuButton.addEventListener('click', () => {
     sidebar.classList.toggle('active');
+  });*/
+
+  const addSpecialityButton = document.getElementById('addSpecialidadBtn');
+  addSpecialityButton.addEventListener('click', () => {
+    window.location.href = 'createSpeciality.html';
   });
 });
 

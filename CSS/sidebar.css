@@ -1,0 +1,69 @@
+nav {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100px 400px auto;
+    grid-template-areas:
+        "titulo"
+        "cotenido"
+        "footer";
+
+    border-right: 2px solid gray;
+}
+
+nav #sdHeader {
+    grid-area: titulo;
+}
+
+nav #sdUl ul {
+    grid-area: contenido;
+    list-style: none;
+    margin: 0%;
+    padding: 0%;
+}
+
+nav #sdUl ul li {
+    padding: 1rem;
+}
+
+nav #sdUl ul li a {
+    color: gray;
+    text-decoration: none;
+}
+
+nav #sdUl ul li a:hover {
+    color: rgb(31, 31, 116);
+    font-size: 18px;
+}
+
+nav #sdUl ul #actual {
+    background-color: #c3dbef;
+}
+
+nav #sdUl ul #actual a {
+    color: rgb(31, 31, 116);
+}
+
+nav #sdFooter ul {
+    grid-area: footer;
+    border-top: 2px solid gray;
+    padding: 0%;
+    margin: 0%;
+}
+
+nav #sdFooter ul li {
+    padding: 0.5rem;
+
+}
+
+nav #sdFooter ul li a {
+    text-decoration: none;
+    color: gray;
+}
+
+nav #sdFooter ul li a:hover {
+    color: black;
+    font-size: 18px;
+}
+nav h3 {
+    color: rgb(31, 31, 116);
+}

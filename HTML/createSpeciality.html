@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/createSpeciality.css">
+    <link rel="stylesheet" href="../CSS/sidebar.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+    <div class="createSpeciality-container">
+        <nav id="sidebar">
+            <div id="sdHeader">
+                <h3>Admin Portal</h3>
+                <span>Gestion Hospitalaria</span>
+            </div>
+            <div id="sdUl">
+                <ul>
+                    <li><a href="dashboard.html">Panel</a></li>
+                    <li><a href="#">Doctores</a></li>
+                    <li id="actual"><a href="#">Especialidades</a></li>
+                    <li><a href="#">Busqueda de Pacientes</a></li>
+                </ul>
+            </div>
+            <div id="sdFooter">
+                <ul>
+                    <li><a href="#">Configuraciones</a></li>
+                    <li><a href="login.html">Cerrar Sesion</a></li>
+                </ul>
+                Mi Aplicación &copy; 2024
+            </div>
+
+        </nav>
+        <main>
+            <div class="titulo">
+                <div>
+                <a href="speciality.html">Especialidades</a>
+                <span>> Agregar nueva especialidad</span>
+                </div>
+                <h2>Registrar nueva especialidad</h2>
+                <p>Complete la informacion tecnica y administrativa para dar de alta una especialidad medica en el
+                    sistema hospitalario</p>
+            </div>
+            <div>
+                <form action="">
+                    <label for="">Nombre de la especialidad</label>
+                    <input type="text">
+                    <label for="">Descripcion</label>
+                    <input type="text">
+                    <label for="">Estado inicial</label>
+                    <select name="Opciomes" id="selec">
+                        <option value="opcion1">Activo - Disponible para programacion</option>
+                        <option value="opcion2">Inactivo - No disponible para programacion</option>
+                    </select>
+                    <div>
+                        <button>Cancelar</button>
+                        <button>Guardar especialidad</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+    </div>
+</body>
+
+</html>

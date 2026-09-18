@@ -1,0 +1,79 @@
+.speciality-container{
+display: grid;
+grid-template-columns: 200px 1fr;
+grid-template-rows: auto;
+grid-template-areas: 
+"sidebar main";
+height: 100dvh;
+}
+.speciality-container nav{
+    grid-area: sidebar;
+    position: static;
+    left: 0;
+    height: auto;
+}
+.speciality-container main{
+    grid-area: main;
+    position: static;
+    right: 0;
+    height: auto;
+    padding: 5% 10%;
+  background-color: #c3dbef;
+  display: grid;
+  grid-template-rows: 120px 1fr 120px;
+  grid-template-columns: auto;
+  grid-template-areas:
+    "head"
+    "tabla"
+    "cards";
+    gap: 3rem;
+}
+.speciality-container main #head{
+grid-area: head;
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: auto;
+grid-template-areas:
+"titulo busqueda";
+}
+.speciality-container main #titulo{
+grid-area: titulo;
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+.speciality-container main #busqueda{
+grid-area: busqueda;
+display: flex;
+align-items: center;
+flex-direction: row;
+}
+.speciality-container main #tabla{
+grid-area: tabla;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border: 2px solid gray;
+}
+.speciality-container main table th,
+.speciality-container main table td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+.speciality-container main #cards{
+grid-area: cards;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 1rem;
+}
+.speciality-container main #cards .card{
+background-color: white;
+padding: 1rem;
+border-radius: 10px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+font-size: 10px;
+border: 2px solid gray;
+border-left: 2px solid rgb(31, 31, 116);
+
+}
