@@ -1,24 +1,49 @@
 nav {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 100px 400px auto;
+    grid-template-rows: 100px 550px auto;
     grid-template-areas:
         "titulo"
         "cotenido"
         "footer";
 
-    border-right: 2px solid gray;
+    border-right: 2.3px solid rgb(228, 224, 224);
+    background-color:#e9f6fd;
+    font-family: 'Open Sans', sans-serif;
 }
+
+/*--------------------PARTE DEL SIDEBAR----------------------*/
+
+/*Cabecera del SD*/
 
 nav #sdHeader {
     grid-area: titulo;
+    margin: 10px;
 }
+
+nav h3 {
+    color: rgb(31, 31, 116);
+    margin-left: 7px;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top:20px;
+    font-weight: 700;
+}
+
+nav span{
+    color: rgba(70, 70, 88, 0.589);
+    margin-left: 7px;
+    font-size: 14px;
+}
+
+/*Lista del SD*/
 
 nav #sdUl ul {
     grid-area: contenido;
     list-style: none;
     margin: 0%;
     padding: 0%;
+    font-size: 15px;
 }
 
 nav #sdUl ul li {
@@ -26,44 +51,56 @@ nav #sdUl ul li {
 }
 
 nav #sdUl ul li a {
-    color: gray;
+    color: rgb(121, 115, 115);
     text-decoration: none;
 }
 
+
 nav #sdUl ul li a:hover {
-    color: rgb(31, 31, 116);
+    color: rgb(0, 0, 0);
     font-size: 18px;
 }
 
 nav #sdUl ul #actual {
-    background-color: #c3dbef;
+    background-color:rgb(249, 250, 253);
+    border: 2px solid #e0e4ee;
+    border-left: 5px solid #0d9488;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin:5px;
+  
 }
 
 nav #sdUl ul #actual a {
-    color: rgb(31, 31, 116);
+    font-weight:bold;
+    color: #0d9488;
+}
+
+/*Pie de pagina del SD*/
+div #sdFooter{
+    margin-top:10%;
+    grid-area: footer;
+    border-top: 2.3px solid rgb(228, 224, 224);
+    padding: 0%;
+    margin-left:10px;
 }
 
 nav #sdFooter ul {
-    grid-area: footer;
-    border-top: 2px solid gray;
     padding: 0%;
-    margin: 0%;
 }
 
 nav #sdFooter ul li {
-    padding: 0.5rem;
+    padding: 0.4rem;
+    margin-left:2px;
 
 }
 
 nav #sdFooter ul li a {
     text-decoration: none;
-    color: gray;
+    color: rgb(121, 115, 115);;
 }
 
 nav #sdFooter ul li a:hover {
     color: black;
     font-size: 18px;
 }
-nav h3 {
-    color: rgb(31, 31, 116);
-}
+
