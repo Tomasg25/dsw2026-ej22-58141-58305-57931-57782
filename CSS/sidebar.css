@@ -91,6 +91,7 @@ nav #sdFooter ul {
 nav #sdFooter ul li {
     padding: 0.4rem;
     margin-left:2px;
+    list-style:none;
 
 }
 
