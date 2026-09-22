@@ -157,12 +157,13 @@
   } */
 .dashboard-container {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 235px 1fr;
   grid-template-rows: auto;
   grid-template-areas:
     "nav main"
   ;
   height: 100dvh;
+  font-family: 'Arial', sans-serif;
 }
 
 .dashboard-container nav {
@@ -176,9 +177,8 @@
   grid-area: main;
   position: static;
   left: 0;
-  height: auto;
-  padding: 5% 10%;
-  background-color: #c3dbef;
+  padding: 5% 5% 5% 5%;
+  background-color:  #c3dbef;
   display: grid;
   grid-template-rows: 100px 120px 1fr;
   grid-template-columns: auto;
@@ -186,7 +186,7 @@
     "titulo"
     "cards"
     "tabla";
-    gap: 3rem;
+    gap: 3.5rem;
 }
 
 .dashboard-container main #titulo {
@@ -198,10 +198,19 @@
   color: rgb(31, 31, 116);
 }
 
+
 .dashboard-container main #titulo #textos {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+/*Agregue  para poder modificar el titulo del subtitulo*/
+
+.dashboard-container main #titulo #texto2 {
+  font-size:17px;
+  color: rgb(121, 115, 115);
+  font-weight: 2;
 }
 
 .dashboard-container main #titulo #botones {
@@ -209,6 +218,30 @@
   gap: 1rem;
   margin-top: 1rem;
 }
+
+/*Agregue  para poder hacer mas grandes los botones*/
+
+.dashboard-container main #titulo #addPDoctortBtn{
+  border-color:rgb(31, 31, 116);
+  border-radius: 5px;
+  background-color:white;
+  color: #0f5f77;
+  height:45px;
+  padding-left: 30px;
+  padding-right:30px
+ 
+}
+
+.dashboard-container main #addSpecialidadBtn{
+  border-color:rgb(31, 31, 116);
+  border-radius: 5px;
+  background-color: white;
+  color:#0f5f77;
+  padding-left: 30px;
+  padding-right:30px
+}
+
+/*HASTA AQUI*/
 
 .dashboard-container main #cards {
   grid-area: cards;
