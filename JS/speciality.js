@@ -1,45 +1,61 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const addSpeciality=document.getElementById("addBtn");
-    addSpeciality.addEventListener("click",()=>{
-        window.location.href="createSpeciality.html";})
+  const addSpeciality = document.getElementById("addBtn");
+  addSpeciality.addEventListener("click", () => {
+    window.location.href = "createSpeciality.html";
+  })
 })
-const tabla=document.getElementById("tabla");
-const specialities=[{
+const tabla = document.getElementById("tabla");
+const specialitiess = [{
   "estado": "ACTIVO",
   "name": "Traumatología",
-  "description": "Área médica dedicada al diagnóstico y tratamiento de lesiones y enfermedades del sistema musculoesquelético."},
+  "description": "Área médica dedicada al diagnóstico y tratamiento de lesiones y enfermedades del sistema musculoesquelético."
+},
 {
   "estado": "INACTIVO",
   "name": "Ginecología",
-  "description": "Especialidad orientada a la salud del aparato reproductor femenino y la prevención de enfermedades asociadas."},
+  "description": "Especialidad orientada a la salud del aparato reproductor femenino y la prevención de enfermedades asociadas."
+},
 {
   "estado": "ACTIVO",
   "name": "Otorrinolaringología",
-  "description": "Especialidad que aborda las enfermedades del oído, nariz, garganta y estructuras relacionadas."}
+  "description": "Especialidad que aborda las enfermedades del oído, nariz, garganta y estructuras relacionadas."
+}
 ];
 
-specialities.forEach((speciality)=>{
+var specialities = [];
 
-    let fila=document.createElement("tr");
+fetch('../specialities.json')
+  .then(response => response.json())
+  .then(data => {
+    specialities = data;
+    cargarTabla();
+  })
+  .catch(error => console.error('Error fetching specialities:', error));
 
-    let nombre=document.createElement("td");
+function cargarTabla() {
+  specialities.forEach((speciality) => {
 
-    let descripcion=document.createElement("td");
+    let fila = document.createElement("tr");
 
-    let estado=document.createElement("td");
+    let nombre = document.createElement("td");
 
-    nombre.textContent=speciality.name;
+    let descripcion = document.createElement("td");
 
-    descripcion.textContent=speciality.description;
+    let id = document.createElement("td");
 
-    estado.textContent=speciality.estado;
-    
+    nombre.textContent = speciality.name;
+
+    descripcion.textContent = speciality.description;
+
+    id.textContent = speciality.id;
+
     fila.appendChild(nombre);
-    
+
     fila.appendChild(descripcion);
-    
-    fila.appendChild(estado);
-    
+
+    fila.appendChild(id);
+
     tabla.appendChild(fila);
-});
+  });
+}
 
