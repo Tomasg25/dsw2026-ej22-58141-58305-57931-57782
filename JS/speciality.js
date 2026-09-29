@@ -3,20 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     addSpeciality.addEventListener("click",()=>{
         window.location.href="createSpeciality.html";})
 })
-const tabla=document.getElementById("tabla");
-const specialitiess=[{
-  "estado": "ACTIVO",
-  "name": "Traumatología",
-  "description": "Área médica dedicada al diagnóstico y tratamiento de lesiones y enfermedades del sistema musculoesquelético."},
-{
-  "estado": "INACTIVO",
-  "name": "Ginecología",
-  "description": "Especialidad orientada a la salud del aparato reproductor femenino y la prevención de enfermedades asociadas."},
-{
-  "estado": "ACTIVO",
-  "name": "Otorrinolaringología",
-  "description": "Especialidad que aborda las enfermedades del oído, nariz, garganta y estructuras relacionadas."}
-];
+
  
 var specialities = [];
  
@@ -52,5 +39,4 @@ function cargarTabla() {specialities.forEach((speciality)=>{
    
     tabla.appendChild(fila);
 });}
- 
  
