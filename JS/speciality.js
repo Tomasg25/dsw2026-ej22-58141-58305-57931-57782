@@ -1,45 +1,50 @@
 document.addEventListener("DOMContentLoaded", () => {
   const addSpeciality = document.getElementById("addBtn");
-  addSpeciality.addEventListener("click", () => {
-    window.location.href = "createSpeciality.html";
-  })
-})
-const tabla = document.getElementById("tabla");
+  const tablaBody = document.getElementById("specialityTableBody");
+  const inputBusqueda = document.querySelector("#busqueda input[type='search']");
 
-var specialities = [];
+  if (addSpeciality) {
+    addSpeciality.addEventListener("click", () => {
+      window.location.href = "createSpeciality.html";
+    });
+  }
 
-fetch('../specialities.json')
-  .then(response => response.json())
-  .then(data => {
-    specialities = data;
-    cargarTabla();
-  })
-  .catch(error => console.error('Error fetching specialities:', error));
 
-function cargarTabla() {
-  specialities.forEach((speciality) => {
+  function cargarTabla(lista) {
+    tablaBody.innerHTML = "";
 
-    let fila = document.createElement("tr");
+    if (lista.length === 0) {
+      let fila = document.createElement("tr");
+      fila.innerHTML = `<td colspan="3" style="text-align: center;">No se encontraron especialidades</td>`;
+      tablaBody.appendChild(fila);
+      return;
+    }
 
-    let nombre = document.createElement("td");
+    lista.forEach((speciality) => {
+      let fila = document.createElement("tr");
 
-    let descripcion = document.createElement("td");
+      let nombre = document.createElement("td");
+      let descripcion = document.createElement("td");
+      let id = document.createElement("td");
 
-    let id = document.createElement("td");
+      nombre.textContent = speciality.name;
+      descripcion.textContent = speciality.description;
+      id.textContent = speciality.id;
 
-    nombre.textContent = speciality.name;
+      fila.appendChild(nombre);
+      fila.appendChild(descripcion);
+      fila.appendChild(id);
 
-    descripcion.textContent = speciality.description;
+      tablaBody.appendChild(fila);
+    });
+  }
 
-    id.textContent = speciality.id;
+  cargarTabla(obtenerEspecialidades());
 
-    fila.appendChild(nombre);
-
-    fila.appendChild(descripcion);
-
-    fila.appendChild(id);
-
-    tabla.appendChild(fila);
-  });
-}
-
+  if (inputBusqueda) {
+    inputBusqueda.addEventListener("input", (e) => {
+      const resultados = filtrarEspecialidades(e.target.value);
+      cargarTabla(resultados);
+    });
+  }
+});
