@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../CSS/createSpeciality.css">
     <link rel="stylesheet" href="../CSS/sidebar.css">
     <link rel="stylesheet" href="../CSS/style.css">
+<script src="../JS/createSpeciality.js" defer></script>
 </head>
 
 <body>
@@ -47,9 +48,9 @@
             <div>
                 <form action="">
                     <label for="">Nombre de la especialidad</label>
-                    <input type="text">
+                    <input id="nombre" type="text">
                     <label for="">Descripcion</label>
-                    <input type="text">
+                    <input id="descripcion" type="text">
                     <label for="">Estado inicial</label>
                     <select name="Opciomes" id="selec">
                         <option value="opcion1">Activo - Disponible para programacion</option>
@@ -57,7 +58,7 @@
                     </select>
                     <div>
                         <button>Cancelar</button>
-                        <button>Guardar especialidad</button>
+                        <button id="BtnGuardar">Guardar especialidad</button>
                     </div>
                 </form>
             </div>
