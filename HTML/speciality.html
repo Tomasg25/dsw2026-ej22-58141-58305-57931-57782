@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="stylesheet" href="../CSS/speciality.css">
     <link rel="stylesheet" href="../CSS/sidebar.css">
+    <script src="../JS/localStorage.js" defer></script>
     <script src="../JS/speciality.js" defer></script>
     <title>Document</title>
 </head>
@@ -42,7 +43,7 @@
                         especializado.</span>
                 </div>
                 <div id="busqueda">
-                    <input type="search">
+                    <input id="filterByName" type="search">
                     <button id="addBtn">Nueva Especialidad</button>
                 </div>
 
@@ -57,6 +58,7 @@
                         </tr>
                     </thead>
                     <tbody id="specialityTableBody">
+
                     </tbody>
                 </table>
 
